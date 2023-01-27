@@ -2,14 +2,20 @@ import {
 	useState,
 	useContext,
 	createContext,
+	useEffect,
 } from 'react';
 import { katakanasGroup } from '../utils/characters';
 
 const katas = Object.entries(katakanasGroup).map(([key]) => key);
-const katasUsing = katas.map((kata) => ({ [kata]: false }));
+const katasUsing = katas.map((kata) => {
+	if (kata !== 'a') {
+		return ({ [kata]: false });
+	}
 
+	return ({ [kata]: true });
+});
 
-interface KatakanaInUse {
+export interface KatakanaInUse {
   [key: string]: boolean;
 }
 
@@ -43,6 +49,10 @@ export const KatakanaProvider = (props: Props) => {
 
 		setKatakanaUsing(newKatakanaUsing);
 	};
+
+	useEffect(() => {
+		console.log(katakanaUsing);
+	}, []);
 
 	return (
 		<KatakanaContext.Provider value={{ katakana: katas, katakanaUsing, handleChangeKatakanaInUse: toggleKatakanaUsingValue }}>

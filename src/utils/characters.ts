@@ -1,3 +1,7 @@
+export interface KatakanaGroup {
+	[key: string]: string[];
+}
+
 export const katakanas = [
 	'ア', 'イ', 'ウ', 'エ', 'オ',
 	'カ', 'キ', 'ク', 'ケ', 'コ',
@@ -24,7 +28,7 @@ export const katakanasInRomaji = [
 	'wa', 'wo', 'n'
 ];
 
-export const katakanasGroup = {
+export const katakanasGroup:KatakanaGroup = {
 	a: ['ア', 'イ', 'ウ', 'エ', 'オ'],
 	ka: ['カ', 'キ', 'ク', 'ケ', 'コ'],
 	sa: ['サ', 'シ', 'ス', 'セ', 'ソ'],

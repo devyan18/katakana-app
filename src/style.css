@@ -46,6 +46,7 @@ html, body {
   justify-content: start;
   align-items: center;
   height: 100vh;
+  width: 100vw;
 }
 
 .toggle-kata-button {
@@ -53,8 +54,8 @@ html, body {
   padding: 0;
   border: 2px solid #f2f2f2;
   cursor: pointer;
-  background-color: #f2f2f2;
-  color: #222;
+  background-color: #222;
+  color: #f2f2f2;
   font-size: 1em;
   border-radius: 6px;
   display: flex;
@@ -65,8 +66,8 @@ html, body {
 }
 
 .toggle-kata-button.active {
-  background-color: #222;
-  color: #f2f2f2;
+  background-color: #f2f2f2;
+  color: #222;
 }
 
 .katakana-selector {
@@ -81,4 +82,66 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.body-app {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0;
+  width: 100%;
+  padding: 0px 16px;
+  text-align: center;
+}
+
+.body-app h1 {
+  font-size: 10em;
+  font-weight: normal;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.body-app form {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  gap: 8px;
+}
+
+.body-app form input {
+  font-size: 1.5em;
+  font-weight: normal;
+  border-radius: 4px;
+  height: 50px;
+  padding: 0px 12px;
+  background-color: #222;
+  outline: none;
+  border: none;
+  color: #f2f2f2;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.body-app form button {
+  font-size: 1.5em;
+  font-weight: normal;
+  border-radius: 4px;
+  height: 50px;
+  background-color: #222;
+  outline: none;
+  border: none;
+  color: #f2f2f2;
+  font-family: 'Noto', serif;
+  cursor: pointer;
+}
+
+.body-app form button:hover {
+  background-color: #333;
+  color: #f2f2f2;
 }
